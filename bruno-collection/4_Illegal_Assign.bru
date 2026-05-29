@@ -1,0 +1,21 @@
+meta {
+  name: 4. Illegal Assign (Agent to Agent)
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:8180/api/v1/conversations/1/assign
+  body: json
+  auth: none
+}
+
+headers {
+  X-Caller-Id: 2
+}
+
+body:json {
+  {
+    "agentId": 4
+  }
+}

@@ -1,0 +1,23 @@
+-- Insert an Agent
+--INSERT INTO users (name, email, role) VALUES ('Alice Agent', 'alice@support.com',
+'AGENT');
+
+-- Insert a Customer
+--INSERT INTO users (name, email, role) VALUES ('Bob Customer', 'bob@example.com',
+'CUSTOMER');
+
+-- Insert a Manager
+--INSERT INTO users (name, email, role) VALUES ('Charlie Manager', 'charlie@support.com',
+                                              'MANAGER');
+
+
+-- Optional: Create an initial unassigned conversation for Bob
+--INSERT INTO conversations (customer_id, status, created_at) VALUES (2, 'UNASSIGNED',
+CURRENT_TIMESTAMP);
+
+-- Optional: Add a welcoming message from the system (or customer) to that conversation
+--INSERT INTO messages (conversation_id, sender_id, content, timestamp) VALUES (1, 2, 'Hi,
+ I need help with my billing account.', CURRENT_TIMESTAMP);
+
+--CREATE INDEX idx_agent_routing ON agent_profile (is_online, active_conversation_count,
+last_assigned_at);
